@@ -1,0 +1,28 @@
+class Book {
+    String title;
+    int publicationYear;
+    Book(String title, int publicationYear) {
+        this.title = title;
+        this.publicationYear = publicationYear;
+    }
+}
+
+class Author extends Book {
+    String name;
+    String bio;
+    Author(String title, int publicationYear, String name, String bio) {
+        super(title, publicationYear);
+        this.name = name;
+        this.bio = bio;
+    }
+    void displayInfo() {
+        System.out.println("Book: " + title + " (" + publicationYear + "), Author: " + name + ", Bio: " + bio);
+    }
+}
+
+public class ques4 {
+    public static void main(String[] args) {
+        Author a = new Author("Java Basics", 2020, "John Doe", "Expert in Java Programming");
+        a.displayInfo();
+    }
+}
